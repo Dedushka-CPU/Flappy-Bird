@@ -1,0 +1,93 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Контейнер игры */
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle, #111 30%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Птица (игрок) */
+.bird {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #ff0, #ff6600);
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ff0, 0 0 30px #ff6600;
+}
+
+/* Верхнее и нижнее препятствия */
+.pipe-top, .pipe {
+    position: absolute;
+    width: 60px;
+    background: linear-gradient(to right, #0ff, #00f); 
+    border: 3px solid #ff0;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+}
+
+/* Верхнее препятствие */
+.pipe-top {
+    top: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Нижнее препятствие */
+.pipe {
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+/* UI: Начальный экран */
+.start-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #0ff;
+    font-family: 'Cyber', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #00f;
+}
+
+/* UI: Надпись "Game Over" */
+.game-over {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #f00;
+    font-family: 'Cyber', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #f00, 0 0 20px #ff0;
+}
+
+/* UI: Очки */
+.score {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #0ff;
+    font-family: 'Cyber', sans-serif;
+    text-shadow: 0 0 5px #0ff, 0 0 15px #00f;
+}
